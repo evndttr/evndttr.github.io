@@ -1,27 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link href='https://fonts.googleapis.com/css?family=Source Serif Pro' rel='stylesheet'>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {
-    font-family: 'Source Serif Pro';font-size: 22px;color:#4D4D4F
+* {
+  box-sizing: border-box;
 }
-h1 {text-align: center;}
-p {text-align: center;}
-div {text-align: center;}
+
+/* Style the body */
 body {
-  background-color: #FFFAF0;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
 }
 </style>
 </head>
 <body>
 
-<h1>Evan Ditter</h1>
-<p><img src="https://fit.princeton.edu/sites/g/files/toruqf2351/files/styles/3x4_750w_1000h/public/people/evan_ditter.jpg?h=6c7fb5bf&itok=9a__M4H6" alt="profile" style="width:150px;height:200px;"></p>
-<p><a href="https://evndttr.github.io/folder/document.pdf">CV/Resume</a></p>
-<p>With years of experience as an educator in the humanities and supporting research projects, I have worked on a variety of library-based projects and digital initiatives Princeton University Library and Penn Libraries at the University of Pennsylvania. I am interested in collaborative work of librarians as research partners, connecting students, educators, and other stakeholders within and beyond university campuses, promoting digital literacies and employing digital tools to make cultural heritage materials accessible..</p>
-<p>Here are some of the recent projects I've worked on:</p>
-<p>AI-powered Handwritten Text Recognition | Digital Storytelling | Digital Library Exhibits and Libguides</p>
+
+<div class="navbar">
+  <a href="#" class="active">Evan Ditter</a>
+  <a href="#" class="right">Link</a>
+  <a href="#" class="right">Link</a>
+  <a href="#" class="right">Link</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>About Me</h2>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    <h3>Contact</h3>
+    <p>Lorem ipsum dolor sit ame.
+  </div>
+    
+  <div class="main">
+    <h2>Welcome!</h2>
+    <p>This website showcases a few digital projects that I have worked on recently as well as other information about work I have done in libraries and other academic contexts</p>
+    <br>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
 
 </body>
 </html>
