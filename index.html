@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'EB Garamond', Georgia, serif;
+    }
+    .fraktur {
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 1.2em;
+      margin-left: 0.25em;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm py-4">
+    <ul class="flex justify-center space-x-8">
+      <li><a href="#home" class="text-gray-700 hover:font-bold transition">Home</a></li>
+      <li><a href="research.html" class="text-gray-700 hover:font-bold transition">Research</a></li>
+      <li><a href="teaching.html" class="text-gray-700 hover:font-bold transition">Teaching</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="flex-grow">
+    <!-- About Section -->
+    <section id="about" class="max-w-3xl mx-auto py-16 px-6 text-center leading-relaxed text-lg">
+      <p>
+        <strong>Hello!</strong> I am a researcher and educator working at the intersection of machine learning and the humanities. I have taught humanities courses, facilitated consultations on AI-powered tools for faculty and researchers, and collaborated with librarians and developers to train custom machine learning models to enhance resource discovery and accelerate research on understudied manuscript materials.
+      </p>
+      <p class="mt-6">
+        During my postdoctoral fellowship at Princeton, I designed instructional materials on AI geared towards students and researchers in the humanities and social sciences. I conducted research on the use of multimodal LLMs, specifically vision-language transformers for complex text recognition tasks.
+      </p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="max-w-4xl mx-auto py-12 px-6">
+      <h2 class="text-2xl font-semibold mb-6 border-b border-gray-300 pb-2 text-center">Featured Projects</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <a href="digits.html" class="bg-white shadow rounded-xl p-6 hover:shadow-md transition">
+          <h3 class="text-xl font-medium mb-2 text-sky-700">
+            Reading like a Machine 
+          </h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            A beginners machine learning workshop on training a machine learning model to perform classification of images of text.
+          </p>
+        </a>
+
+        <a href="digitalcommonplace.html" class="bg-white shadow rounded-xl p-6 hover:shadow-md transition">
+          <h3 class="text-xl font-medium mb-2 text-sky-700">Visualizing Early Modern Citation</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Using computational methods to track text reuse in early modern commonplace books.
+          </p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-center py-4 text-sm text-gray-600">
+  </footer>
+
+</body>
+</html>

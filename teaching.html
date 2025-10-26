@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teaching | Evan Ditter</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'EB Garamond', Georgia, serif;
+    }
+
+    .fraktur {
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 1.2em;
+      margin-left: 0.25em;
+    }
+
+    main a {
+      color: #1d4ed8;
+      text-decoration: underline;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 3px;
+      font-weight: 500;
+      transition: color 0.2s ease, background-color 0.2s ease;
+    }
+
+    main a:hover {
+      color: #0c4a6e;
+      background-color: #eff6ff;
+      border-radius: 2px;
+      text-decoration: none;
+    }
+
+    nav a {
+      color: #374151;
+    }
+
+    nav a:hover {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 leading-relaxed">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm py-4">
+    <ul class="flex justify-center space-x-8">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="teaching.html" class="font-bold">Teaching</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-3xl mx-auto py-16 px-6">
+    <h1 class="text-3xl font-semibold mb-10 text-center text-gray-900">Teaching & Learning</h1>
+
+    <!-- Digital Humanities Workshops -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold mb-4 text-gray-900 border-b border-gray-300 pb-1">
+        Digital Humanities Workshops
+      </h2>
+      <ul class="space-y-10">
+        <!-- Notebook 1 -->
+        <li>
+          <div class="bg-white shadow-md rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+            <a href="digits.html" target="_blank">
+              <img src="colab_demo.gif" alt="Colab Notebook Preview" class="w-full object-cover rounded-xl shadow-md">
+              <div class="p-5">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                  Reading like a machine: Understanding machine learning through visual experiments
+                </h3>
+                <p class="text-gray-600 text-sm mb-4">
+                  A hands-on introduction to concepts like features, weights, and biases using scikit-learn and the MNIST dataset. Students learn the mechanics of training, prediction, and evaluation through visual interaction.
+                </p>
+              </div>
+            </a>
+            <div class="flex justify-between items-center px-5 pb-5">
+              <a href="https://colab.research.google.com/drive/1UPTInoiSfIvxDPLkgE8LOgtPhivwR__j#scrollTo=YrgcUCjuIjqs" target="_blank" class="text-blue-700 underline text-sm font-medium">
+                Launch in Colab →
+              </a>
+              <a href="https://github.com/YOUR-GITHUB-USERNAME/teaching-notebooks" target="_blank" class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-md hover:bg-gray-200 transition">
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Notebook 2 -->
+        <li>
+          <div class="bg-white shadow-md rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+            <div>
+              <img src="prompts.png" alt="Transformers fine-tuning notebook preview" class="w-full object-cover">
+              <div class="p-5">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                  Fine-tuning with Hugging Face Transformers - <strong>In Progress</strong>
+                </h3>
+                <p class="text-gray-600 text-sm mb-4">
+                  An advanced Colab session demonstrating how to fine-tune a pretrained transformer using the Transformers library from Hugging Face. Students explore model configuration, tokenization, and evaluation.
+                </p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center px-5 pb-5">
+              <span class="text-gray-700 underline text-sm font-medium">
+                Launch in Colab →
+              </span>
+              <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-md hover:bg-gray-200 transition">
+                View on GitHub
+              </span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+
+        <!-- Humanities Courses -->
+        <section class="mb-12">
+          <h2 class="text-2xl font-semibold mb-4 text-gray-900 border-b border-gray-300 pb-1">
+           Humanities Courses
+          </h2>
+          <ul class="space-y-6">
+
+
+            <li>
+              <p>
+                <strong>French 105: Intermediate French (Fall 2022)</strong> - Princeton University
+              </p>
+              <p class="text-base text-gray-600 mt-1">
+               A course designed around the close reading of a variety of authors, from philosophers (Frantz Fanon, Aimé Césaire) to poets (Natasha Kanapé Fontaine). Themes explored in the course include postcolonial thought in the Caribbean and decolonial activism in Quebec. 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <strong>French 107: Intermediate/Advanced French (Fall 2021)</strong> - Princeton University
+              </p>
+              <p class="text-base text-gray-600 mt-1">
+               An advanced course for undergraduates with an emphasis on practicing complex linguistic structures, while examining works of literature by authors such as Dany Laferrière, Annie Ernaux and Charles Baudelaire, as well as a number of contemporary films. 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <strong>Beginner's French (Fall 2021)</strong> - East Jersey State Prison
+              </p>
+              <p class="text-base text-gray-600 mt-1">
+              A course taught through Princeton's Prison Teaching Initiative (PTI) covering the essential groundwork of French, with exercises in prononciation and key grammatical structures, and culminating in students producing a short essay that synthesized knowledge gained in the course. 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <strong>French 103: Intensive Intermediate French (Fall 2020)</strong> - Princeton University
+              </p>
+              <p class="text-base text-gray-600 mt-1">
+               An accelerated beginners course in French, teaching grammar structures in cultural context. 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <strong>French 101: Beginners French (Fall 2019)</strong> - Princeton University
+              </p>
+              <p class="text-base text-gray-600 mt-1">
+               An introductory-level course in French for undergraduate students, focusing on competency in speaking, listening, reading and writing. 
+              </p>
+            </li>
+
+            <li>
+              <p>
+               <strong>First-Year French to English Translation (Fall 2017, Spring 2018)</strong> - University Lyon III
+              </p>
+              <p class="text-base text-gray-600 mt-1">
+               A translation workshop for first-year undergraduate students, with each session focused on a particular grammatical theme. The course was structured around students' translations for an assigned text, which were discussed and workshopped as a group.
+              </p>
+            </li>
+
+
+            <li>
+              <p>
+                <strong>Second-Year French to English Translation (Fall 2017, Spring 2018)</strong> - University Lyon III 
+              </p>
+              <p class="text-base text-gray-600 mt-1">
+               A translation workshop for second-year undergraduate students focusing on themes of culture and civilization in the Anglophone world.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <strong>English for History Students (Fall 2017)</strong> - University Lyon III
+              </p>
+              <p class="text-base text-gray-600 mt-1">
+               A course for history students on the theme of myth in Anglophone countries; topics covered included narratives of identity in 19th-century Ireland, mythologies in American western films, and counterfactual histories. 
+              </p>
+            </li>
+          </ul>
+        </section>
+
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-center py-4 text-sm text-gray-600">
+  </footer>
+</body>
+</html>

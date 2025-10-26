@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research | Evan Ditter</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'EB Garamond', Georgia, serif;
+    }
+
+    /* Body text links */
+    main a {
+      color: #1d4ed8; /* blue-700 */
+      text-decoration: underline;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 3px;
+      font-weight: 500;
+      transition: color 0.2s ease, background-color 0.2s ease;
+    }
+    main a:hover {
+      color: #0c4a6e; /* blue-900 */
+      background-color: #eff6ff; /* blue-50 */
+      border-radius: 2px;
+      text-decoration: none;
+    }
+
+    /* Navbar links */
+    nav a {
+      color: #374151; /* gray-700 */
+    }
+    nav a:hover {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 leading-relaxed">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm py-4">
+    <ul class="flex justify-center space-x-8">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="research.html" class="font-bold">Research</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+    </ul>
+  </nav>
+
+  <!-- Publications -->
+  <main class="max-w-3xl mx-auto py-16 px-6">
+    <h1 class="text-3xl font-semibold mb-10 text-center text-gray-900">Recent Publications & Digital Projects</h1>
+
+    <!-- Journal Articles -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4 text-gray-900 border-b border-gray-300 pb-1">Journal Articles</h2>
+      <ul class="space-y-6">
+        <li>
+          <p>
+            (2025)
+            “<em>Navigational lexicography: The model of European phrasebooks in France and the Americas</em>.”
+            <span class="italic">Exemplaria</span>, <span>36(4)</span>, 367–390.
+            <a href="https://doi.org/10.1080/10412573.2024.2437337" target="_blank">
+              https://doi.org/10.1080/10412573.2024.2437337
+            </a>
+          </p>
+          <p class="text-base text-gray-600 mt-1">
+            This article examines early modern phrasebooks as models for translingual navigation and cultural contact,
+            focusing on France’s linguistic exchanges with the Americas.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Public Humanities -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4 text-gray-900 border-b border-gray-300 pb-1">
+        Public Humanities
+      </h2>
+      <ul class="space-y-6">
+        <li>
+          <p>
+            (2024)
+            “<em>A Thousand Scripts, One Model: Transcribing 19th-Century Penn Medical Dissertations using Handwritten Text Recognition</em>.”
+            <a href="https://uniqueatpenn.wordpress.com/2024/08/28/a-thousand-scripts-one-model-transcribing-19th-century-penn-medical-dissertations-using-handwritten-text-recognition/" target="_blank">
+              Essay featured on Unique at Penn
+            </a>.
+          </p>
+          <p class="text-base text-gray-600 mt-1">
+            A public-facing post on handwritten text recognition in 19th-century Penn medical dissertations,
+            written for the Unique at Penn blog.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Digital Projects -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4 text-gray-900 border-b border-gray-300 pb-1">
+        Digital Projects
+      </h2>
+      <ul class="space-y-6">
+
+        <!-- A Digital Commonplace Book -->
+        <li>
+          <p>
+          <div class="bg-white shadow-md rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+            <a href="digitalcommonplace.html" target="_blank">
+              <img src="demo.gif" alt="Colab Notebook Preview" class="w-full object-cover rounded-xl shadow-md">
+              <div class="p-5">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                  A Digital Commonplace Book
+                </h3>
+                <p class="text-gray-600 text-sm mb-4">
+                  An interactive viewer that places a 16th-century commonplace book alongside a printed edition from which it draws citations, in order to visualize relationships between the two texts.
+                </p>
+              </div>
+            </a>
+            <div class="flex justify-between items-center px-5 pb-5">
+              <a href="https://evndttr.github.io/d_commonplace/" target="_blank" class="text-blue-700 underline text-sm font-medium">
+                Launch the viewer →
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Datasets -->
+        <section class="mb-12">
+          <h2 class="text-2xl font-semibold mb-4 text-gray-900 border-b border-gray-300 pb-1">
+            Datasets & Digital Resources
+          </h2>
+          <ul class="space-y-6">
+
+            <!-- Thevet Commonplace Book -->
+            <li>
+              <p>
+                “'Notes de lecture' on André Thevet, <em>Cosmographie universelle</em> (1575).”
+                <a href="https://huggingface.co/datasets/evndttr/Notes_de_lecture_PUL-Thevet_1575_Cosmographie" target="_blank">
+                  Hugging Face Repository
+                </a>.
+              </p>
+              <p class="text-base text-gray-600 mt-1">
+                A 15-page excerpt of an anonymous 16th-century commonplace book held at Princeton University Library,
+                containing reading notes and citations drawn from André Thevet’s <em>Cosmographie universelle</em> (1575).
+                Transcribed for research in digital paleography, OCR, and text reuse.
+              </p>
+            </li>
+
+            <!-- Jacques Cartier Relation -->
+            <li>
+              <p>
+                “Ms. Moreau 841 — Jacques Cartier, <em>Relation</em> (1534).”
+                <a href="https://huggingface.co/datasets/evndttr/Ms_Moreau_841-Cartier_1534_Relation" target="_blank">
+                  Hugging Face Repository
+                </a>.
+              </p>
+              <p class="text-base text-gray-600 mt-1">
+                Line-level transcriptions and cropped manuscript images from the BnF manuscript Ms. Moreau 841,
+                a handwritten copy of Jacques Cartier’s 1534 voyage <em>Relation</em>. Provides training and evaluation data
+                for handwritten text recognition and historical French language modeling.
+              </p>
+            </li>
+
+            <!-- Pros mathēmatikous  -->
+            <li>
+              <p>
+                “Excerpts from LJS380 - Sextus Empiricus, <em>Pros mathēmatikous</em>.”
+                <a href="https://huggingface.co/datasets/evndttr/LJS380_excerpts-Sextus_Empiricus_Pros_Mathematikous" target="_blank">
+                  Hugging Face Repository
+                </a>.
+              </p>
+              <p class="text-base text-gray-600 mt-1">
+                Line-level transcriptions and cropped manuscript images of a 15th-century manuscript copy of the Greek treatise
+                <em>Pros mathēmatikous</em> attributed to Sextus Empiricus, held within the Lawrence J. Schoenberg Collection at Penn Libraries.
+                Manuscript lines were transcribed to match an 1842 public domain edition by August Immanuel Bekker, and used to train a machine learning
+                model for recognizing handwritten Greek in the context of a Hellenic studies workshop. 
+              </p>
+            </li>
+
+            <!-- MS 24269 (placeholder or future dataset) -->
+            <li>
+              <p>
+                “Ms. 24269 Dataset.”
+              </p>
+              <p class="text-base text-gray-600 mt-1">
+                A forthcoming dataset of early modern manuscript transcriptions, prepared for analysis on text reuse patterns. 
+              </p>
+            </li>
+          </ul>
+        </section>
+
+
+    <!-- In Progress -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4 text-gray-900 border-b border-gray-300 pb-1">In Progress</h2>
+      <ul class="space-y-6">
+        <li>
+          <p>
+           (In preparation).
+            <em>At the Limits of Legibility</em>.
+          </p>
+          <p class="text-base text-gray-600 mt-1">
+            This monograph explores the dialogical relationship between French language standardization and early modern imperialism. It employs computational methods (computer vision, stylometrics, handwritten text recognition) to explore the relationship between technology and legibility from the 16th century to the present. 
+          </p>
+        </li>
+      </ul>
+    </section>
+
+
+
+    <!-- Other projects -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4 text-gray-900 border-b border-gray-300 pb-1">Other projects</h2>
+      <ul class="space-y-6">
+        <li>
+          <p>
+           Interactive prototypes created for an NEH-funded project.
+           <a href="repatriation_project.html"_blank"> 
+           Map and timeline examples
+            </a>.
+          <p class="text-base text-gray-600 mt-1">
+            Interactive map and timeline prototypes created for an inter-institutional project, a collaboration between Princeton's Department of Spanish and Portuguese, Princeton University Library, and institutions and archives in the UK and the Philippines. 
+          </p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-center py-4 text-base text-gray-600">
+  </footer>
+</body>
+</html>

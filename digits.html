@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reading like a Machine</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'EB Garamond', Georgia, serif;
+    }
+    .fraktur {
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 1.2em;
+      margin-left: 0.25em;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm py-4">
+    <ul class="flex justify-center space-x-8">
+      <li><a href="index.html" class="text-gray-700 hover:font-bold transition">Home</a></li>
+      <li><a href="research.html" class="text-gray-700 hover:font-bold transition">Research</a></li>
+      <li><a href="teaching.html" class="text-gray-700 hover:font-bold transition">Teaching</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto py-16 px-6 leading-relaxed text-lg">
+
+    <!-- Section: Reading like a Machine -->
+    <section class="mb-16">
+      <h1 class="text-3xl font-semibold text-center mb-6 border-b border-gray-300 pb-2">
+        Reading like a Machine
+      </h1>
+
+      <ul class="space-y-8">
+        <li>
+          <p><strong>An interactive workshop</strong></p>
+          <p class="text-lg text-gray-600 mt-1">
+           This interactive workshop uses visual content, grids, and buttons in a step-by-step Google Colab Notebook which combines textual explanations and executable Python code to introduce humanities students to key concepts in machine learning. The activities require no previous knowledge of programming, and utilize clickable graphics to enable learners to train and evaluate models capable of distinguishing between handwritten digits. By the end of the workshop, learners should have a working knowledge transferrable to more complex artificial intelligence tools. 
+          </p>
+        </li>
+
+        <li>
+          <div class="bg-white shadow-md rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+            <a href="https://colab.research.google.com/drive/1UPTInoiSfIvxDPLkgE8LOgtPhivwR__j#scrollTo=YrgcUCjuIjqs" target="_blank">
+              <img src="colab_demo.gif" alt="Colab Notebook Preview" class="w-full object-cover rounded-t-xl shadow-md">
+              <div class="p-5">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                  Reading like a machine: Understanding machine learning through visual experiments
+                </h3>
+                <p class="text-gray-600 text-sm mb-4">
+                  A hands-on introduction to concepts like features, weights, and biases using scikit-learn and the MNIST dataset. Students learn the mechanics of training, prediction, and evaluation through visual interaction.
+                </p>
+              </div>
+            </a>
+            <div class="flex justify-between items-center px-5 pb-5">
+              <a href="https://colab.research.google.com/drive/1UPTInoiSfIvxDPLkgE8LOgtPhivwR__j#scrollTo=YrgcUCjuIjqs" target="_blank" class="text-blue-700 underline text-sm font-medium">
+                Launch in Colab →
+              </a>
+              <a href="https://github.com/YOUR-GITHUB-USERNAME/teaching-notebooks" target="_blank" class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-md hover:bg-gray-200 transition">
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Section: About this Workshop -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4 text-gray-900 border-b border-gray-300 pb-1">
+        About this Workshop
+      </h2>
+
+      <ul class="space-y-6">
+        <li>
+          <p><strong>Learning Objectives</strong></p>
+          <p class="text-lg text-gray-600 mt-1">
+            In this introductory workshop I created during my postdoctoral fellowship at Princeton, students train a simple classifier to recognize handwritten digits using a prewritten Python notebook. Through interactive widgets, they manipulate parameters and observe how changes in input affect model performance. This exercise, simple as it is, opens space for larger discussions about what it means for a computer to “learn” and how models process human writing. By the end, students not only understand the inner workings of a basic machine-learning pipeline but also approach AI systems with new conceptual clarity—learning key machine learning concepts like features and weights, and how to apply them to more complex situations.
+          </p>
+        </li>
+
+        <li>
+          <p><strong>Resources Consulted</strong></p>
+
+          <div class="text-lg text-gray-600 space-y-4 mt-1">
+            <p>
+              This beginner’s workshop is modeled after many of the freely available workshops that use this ‘toy’ dataset, as well as the official
+              <a href="https://scikit-learn.org/1.5/auto_examples/datasets/plot_digits_last_image.html" target="_blank" class="text-blue-700 underline hover:text-blue-900">
+                scikit-learn documentation for the digits dataset
+              </a>
+              and the many freely available tutorials about training machine learning models using logistic regression (see the
+              <a href="https://scikit-learn.org/stable/auto_examples/linear_model/plot_sparse_logistic_regression_mnist.html" target="_blank" class="text-blue-700 underline hover:text-blue-900">
+                scikit-learn documentation on this topic
+              </a>
+              for example).
+            </p>
+
+            <p>
+              To create the final two exercises of this workshop, I relied heavily on the
+              <a href="https://ipywidgets.readthedocs.io/en/latest/index.html#learning-widgets" target="_blank" class="text-blue-700 underline hover:text-blue-900">
+                Jupyter Widgets framework (ipywidgets library)
+              </a>
+              to create interactive buttons and grids. I started this workshop with little familiarity with these tools, so the documentation, tutorial videos, and example notebooks available on the
+              <a href="https://ipywidgets.readthedocs.io/en/latest/" target="_blank" class="text-blue-700 underline hover:text-blue-900">
+                ipywidgets documentation page
+              </a>, as well as numerous freely available online tutorials and videos, were invaluable as I experimented with these interactive tools.
+            </p>
+
+            <p>
+              The intention of these widgets, and the code being set to hidden by default, is not to obfuscate the code or the mechanics, but rather to make the projects less intimidating to students who have not had experience writing code. This notebook, intended as a beginner’s activity, would lead into workshops where students write their own code based on provided examples.
+            </p>
+
+            <p>
+              On a technical level, the final two exercises are centered around the
+              <a href="https://ipywidgets.readthedocs.io/en/7.x/examples/Layout%20Templates.html" target="_blank" class="text-blue-700 underline hover:text-blue-900">
+                gridbox
+              </a>
+              and
+              <a href="https://ipywidgets.readthedocs.io/en/latest/examples/Widget%20Events.html" target="_blank" class="text-blue-700 underline hover:text-blue-900">
+                button
+              </a>
+              widgets.
+              </p>
+
+             <p>Exercise five dynamically accepts user input for an array of features (pixel coordinates) that are flattened from a two-dimensional sequence to a single vector, which is then passed to the logistic regression training function. The training, as well as the reset, are set up as functions activated when students press the respective buttons.
+            </p>
+
+            <p>
+              Exercise six—which is still a work in progress—is not an example of machine learning, but a simplified rule-based classification system meant to help students understand what a model does during the training process. Like exercise five, the grid matrix again dynamically accepts user input to create an array of pixel coordinates. But this array functions as a sort of “if” condition—a threshold that evaluates each image and returns either True or False depending on whether the image meets that condition.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-center py-4 text-sm text-gray-600 mt-12">
+  </footer>
+
+</body>
+</html>
