@@ -45,7 +45,7 @@
         <li>
           <p><strong>Visualizing early modern practices of reading</strong></p>
           <p class="text-lg text-gray-600 mt-1">
-           This interactive viewer aims to provide insight into early modern practices of reading, by placing handwritten notes in an early modern commonplace book alongside the printed book they cite. Commonplace books are notebooks in which readers collect quotes and facts, or 'commonplaces,' encountered in books. This particular notebook, today held at the Princeton University Library, contains a large section dedicated to a popular travel narrative collection written by André Thevet, <em> La cosmographie vniuerselle </em> and published in 1575. By aligning the text shared between them, this interactive site enables viewer not only to better understand how early modern readers interacted with their printed books, but how they envisioned the world presented to them in travel texts.
+           This interactive viewer aims to provide insight into early modern practices of reading, by placing handwritten notes in an early modern commonplace book alongside the printed book they cite. Commonplace books are notebooks in which readers collect quotes and facts, or 'commonplaces,' encountered in books. This particular notebook, today held at the Princeton University Library, contains a large section dedicated to a popular travel narrative collection written by André Thevet, <em> La cosmographie vniuerselle </em> and published in 1575. By aligning the text shared between them, this site enables the viewer to better understand not only how early modern readers interacted with their printed books, but also how they envisioned the world presented to them in travel texts.
           </p>
         </li>
 
@@ -82,15 +82,15 @@
         <li>
           <p><strong>Data collection</strong></p>
           <p class="text-lg text-gray-600 mt-1">
-           This project, which I began as a fellow at the Princeton Center for Digital Humanities in 2023, seeks to visualize the complex relationship between reader and text, reconstructed from 16th-century reader’s handwritten notes held at the Princeton University Library, <a href="https://catalog.princeton.edu/catalog/9960613933506421" target="_blank" class="text-blue-700 underline hover:text-blue-900">
+           This project, which I began as a fellow at the Princeton Center for Digital Humanities in 2023, seeks to visualize the complex relationship between reader and text, as reconstructed by a 16th-century reader’s handwritten notes held at the Princeton University Library, <a href="https://catalog.princeton.edu/catalog/9960613933506421" target="_blank" class="text-blue-700 underline hover:text-blue-900">
                 Notes de lecture, ca. 1578-1612.
               </a>. 
-To obtain the data underlying this visualization I trained a customized machine learning model to generate machine-readable transcriptions of the handwritten pages. This process consisted of fine-tuning a machine learning model to adapt it for this specific paleographic context, using established tools driven by convolutional neural networks (CNN) such as <a href="https://github.com/UB-Mannheim/escriptorium" target="_blank" class="text-blue-700 underline hover:text-blue-900">
+To obtain the data underlying this visualization, I trained a customized machine learning model to generate machine-readable transcriptions of the handwritten pages. This process consisted of fine-tuning a machine learning model to adapt it for this specific paleographic context, using established tools driven by convolutional neural networks (CNN) such as <a href="https://github.com/UB-Mannheim/escriptorium" target="_blank" class="text-blue-700 underline hover:text-blue-900">
                 Kraken/eScriptorium
               </a>  and <a href="https://www.transkribus.org" target="_blank" class="text-blue-700 underline hover:text-blue-900">
                 Transkribus
               </a>. With this dataset, I then applied programmatic methods for detecting and tracing textual reuse using a very interesting tool called <a href="https://github.com/dasmiq/passim" target="_blank" class="text-blue-700 underline hover:text-blue-900"> 
-               Passim. </a> Along with producing precise data about the locations, content, and context of the citations between the respective volumes, this also allowed for easily comparing the two texts, placing shared passages between handwritten and printed texts side by side in the  output json file. 
+               Passim. </a> Along with producing precise data about the locations, content, and context of the citations between the respective volumes, this allows for an easy comparison of the two texts, placing shared passages between handwritten and printed texts side by side in the output json file. 
           </p>
 
           <p>
@@ -101,52 +101,7 @@ To obtain the data underlying this visualization I trained a customized machine 
               The prototype for the visualization, which is still a work in progress, uses a simplified version of <a href="https://en.wikipedia.org/wiki/Page_Analysis_and_Ground_Truth_Elements" target="_blank" class="text-blue-700 underline hover:text-blue-900">
                 PAGE xml
               </a>,
-the typical output from a handwritten text recognition workflow, that includes only the pixel coordinates on the image that make up the bounding box or polygon that encloses each text line, and labels them simply as line one, line two, etc. Each of these lines corresponds to a polygon or bounding box on the page images of the printed or manuscript book.
-          </p>
-        </li>
-
-        <li>
-          <p><strong>Technical Resources Consulted for Visualization</strong></p>
-
-          <div class="text-lg text-gray-600 space-y-4 mt-1">
-            <p>
-             This site is a prototype intended primarily for demonstration purposes. The visualization project itself was an exploratory venture, and would require optimization to function with larger datasets. On a technical level, the page structure is designed to be visually simple, and for the basic html and CSS structures and styling (the two panels, the drop down explanations, and the pop ups that appear for certain lines), I relied on knowledge that I have gained from tutorials like those found at <a href="https://www.w3schools.com/" target="_blank" class="text-blue-700 underline hover:text-blue-900">
-                W3 Schools
-              </a>.
-            </p>
-
-            <p>
-              The javascript which handles the interactive features of the website was relatively new to me when I started this project, and much of what I have currently put together was derived through experimentation. The full <a href="https://www.w3schools.com/js/" target="_blank" class="text-blue-700 underline hover:text-blue-900">
-                javascript tutorial
-              </a> tutorial at W3 Schools, was a particularly helpful starting point. 
-            </p>
-
-            <p>
-              The javascript loads the images and along with corresponding xml as list of constants, whose paths are hard coded into the script. The xml files are parsed using 
-              <a href="https://www.w3schools.com/xml/xml_dom.asp" target="_blank" class="text-blue-700 underline hover:text-blue-900">
-                DOM parser
-              </a>
-              which retrieves the coordinates (the location of the text on the image) as well as its identifier (line 1, 2, 3, etc). In the process, I ended up simplifying the structure of the xmls, eliminating the transcriptions and replacing with line identifiers; but future iterations of the project will maintain the original structure of the xmls in order to preserve this information for future visualization features. The pixel coordinates are then used to draw svgs that appear as translucent polygons on top of the images. 
-            </p>
-
-            <p>
-              The main logic behind the mechanism that highlights specific passages relies on function that <a href="https://www.w3schools.com/js/js_htmldom_eventlistener.asp" target="_blank" class="text-blue-700 underline hover:text-blue-900">
-                listens
-              </a> for specific user actions such as hovering or clicking (<a href="https://ipywidgets.readthedocs.io/en/latest/examples/Widget%20Events.html" target="_blank" class="text-blue-700 underline hover:text-blue-900">
-                mouseenter
-              </a> /
-              <a href="https://ipywidgets.readthedocs.io/en/latest/examples/Widget%20Events.html" target="_blank" class="text-blue-700 underline hover:text-blue-900">
-                mouseleave
-              </a> or
-              <a href="https://ipywidgets.readthedocs.io/en/latest/examples/Widget%20Events.html" target="_blank" class="text-blue-700 underline hover:text-blue-900">
-                clicks
-              </a>).
-              All of these user actions cause all the polygons that share the same identifier to change color, and the click action locks them until something else is clicked. Specific lines are additionally flagged to trigger a popup that explains details about the passage. Finally, the scrolling function, which was included primarily to dramatize the often non-linear and selective way that this reader engages with the text, automatically moves images in the left pane to bring the matched passages into view. This functions by first locating the image and position of the polygon containing the text, calculates how to center it in the panel, and uses a method (
-              <a href="https://www.w3schools.com/jsref/met_win_scrollto.asp" target="_blank" class="text-blue-700 underline hover:text-blue-900">
-                scrollTo
-              </a>) to scroll the document to that location. 
-            </p>
-          </div>
+the typical output from a handwritten text recognition workflow. I ended up simplifying the structure of the xmls, eliminating the transcriptions and replacing them with simple line identifiers 'line one,' 'line two,' etc. which are linked between the two texts. For a more detailed technical explanation please see the github README file. 
         </li>
       </ul>
     </section>
